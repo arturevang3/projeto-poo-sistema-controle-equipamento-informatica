@@ -21,3 +21,18 @@ vende equipamentos de informática e resolveu informatizar-se.
 ▪ Cliente: (nome, endereço e CPF).
 
 ▪ Fornecedor: (nome, CPF, endereço).
+
+2) Pesquisar:
+
+▪ Equipamentos (nome, número de série, responsável ou local).
+
+▪ Cliente (nome, CPF).
+
+▪ Fornecedor (nome, CPF).
+
+3) Nota de venda: Elaborar nota de venda. Permitir alteração ou cancelamento de venda.
+
+4) Comprar e vender de equipamentos: Será feita a compra de equipamentos de fornecedores, e a venda para
+clientes.
+
+5) Relatório: Gerar um relatório de vendas por período (com detalhamento dos equipamentos).

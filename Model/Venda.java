@@ -10,5 +10,9 @@ public class Venda {
 	public void realizarVenda(Venda venda) {
 		
 	}
+	
+	public void gerarRelatorioVenda(Venda venda) {
+	
+	}
 
 }

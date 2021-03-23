@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Compra{
 	public Fornecedor fornecedor;
 	public Equipamento equipamento;

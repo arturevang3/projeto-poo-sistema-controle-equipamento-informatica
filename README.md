@@ -1,4 +1,4 @@
-# projeto-poo-sistema-controle-equipamento-informatica
+# Sistema de controle de estoque de equipamentos de informática
 Projeto de POO de Raquel e Artur
 
 Proposta: O comércio minhaCasaTech que funciona informalmente na casa do sr. Toinho e do seu primo Kanalense,

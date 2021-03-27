@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Responsavel {
 	public String nome;
 	public String telefone;
@@ -18,10 +20,6 @@ public class Responsavel {
 	}
 	
 	public void pesquisar(Responsavel responsavel) {
-		
-	}
-	
-	public void gerarRelatorioVendas(Responsavel responsavel) {
 		
 	}
 

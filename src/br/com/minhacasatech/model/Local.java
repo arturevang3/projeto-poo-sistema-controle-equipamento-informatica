@@ -5,14 +5,14 @@ public class Local {
 	private String nomeDoCompartimento;
 	
 	public Local(String nomeDaCasa, String nomeDoCompartimento) {
-		this.nomeDaCasa = nomeDaCasa;
-		this.nomeDoCompartimento = nomeDoCompartimento;
+		setNomeDaCasa(nomeDaCasa);
+		setNomeDoCompartimento(nomeDoCompartimento);
 	}
 	
-	public String getnomeDacasa() {
+	public String getNomeDacasa() {
 		return this.nomeDaCasa;
 	}
-	public void setnomeDaCasa(String novo) {
+	public void setNomeDaCasa(String novo) {
 		if (novo == "" || novo == null) {
 			System.out.println("O nome da casa não foi informado, por favor informe-o");
 		} else {
@@ -20,10 +20,10 @@ public class Local {
 		}
 	}
 	
-	public String getnomeDoCompartimento() {
+	public String getNomeDoCompartimento() {
 		return this.nomeDoCompartimento;
 	}
-	public void setnomeDoCompartimento(String novo) {
+	public void setNomeDoCompartimento(String novo) {
 		if (novo == "" || novo == null) {
 			System.out.println("O nome do compartimento não foi informado, por favor informe-o.");
 		} else {

@@ -12,13 +12,13 @@ public class Venda {
 	private String tipoDePagamento;
 	
 	public Venda(Cliente cliente, Responsavel responsavel, Equipamento equipamento, int quantidade, float valor, Calendar dataDaVenda, String tipoDePagamento) {
-		this.cliente = cliente;
-		this.responsavel = responsavel;
-		this.equipamento = equipamento;
-		this.quantidade = quantidade;
-		this.valor = valor;
-		this.dataDaVenda = dataDaVenda;
-		this.tipoDePagamento = tipoDePagamento;
+		setCliente(cliente);
+		setResponsavel(responsavel);
+		setEquipamento(equipamento);
+		setQuantidade(quantidade);
+		setValor(valor);
+		setDataDaVenda(dataDaVenda);
+		setTipoDePagamento(tipoDePagamento);
 	}
 	
 	public Cliente getCliente() {
@@ -77,18 +77,18 @@ public class Venda {
     	}
     }
     
-    public Calendar getdataDaVenda() {
+    public Calendar getDataDaVenda() {
     	return this.dataDaVenda;
     }
-    public void setdataDaVenda(Calendar novo) {
+    public void setDataDaVenda(Calendar novo) {
     	this.dataDaVenda = novo;
     }
     
-    public String gettipoDePagamento() {
+    public String getTipoDePagamento() {
     	return this.tipoDePagamento;
     }
     
-    public void settipoDePagamento(String novo) {
+    public void setTipoDePagamento(String novo) {
     	if (novo == "" || novo == null) {
     		System.out.println("O tipo de pagamento não foi informado, por favor informe-o.");
     	} else {

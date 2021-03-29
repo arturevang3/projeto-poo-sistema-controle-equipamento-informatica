@@ -12,14 +12,14 @@ public class Equipamento{
     private Fornecedor fornecedor;
     
     public Equipamento(String nome,float peso,String serie,int quantidade,float preco,Local local,Responsavel responsavel,Fornecedor fornecedor) {
-        this.nome = nome;
-        this.peso = peso;
-        this.serie = serie;
-        this.quantidade = quantidade;
-        this.preco = preco;
-        this.local = local;
-        this.responsavel = responsavel;
-        this.fornecedor = fornecedor;
+        setNome(nome);
+        setPeso(peso);
+        setSerie(serie);
+        setQuantidade(quantidade);
+        setPreco(preco);
+        setLocal(local);
+        setResponsavel(responsavel);
+        setFornecedor(fornecedor);
     }
 
     public String getNome(){

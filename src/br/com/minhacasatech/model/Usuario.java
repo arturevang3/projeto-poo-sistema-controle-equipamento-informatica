@@ -8,11 +8,11 @@ public class Usuario {
 	private String email;
 	
 	public Usuario(String login, String senha, String nome, String cpf, String email) {
-		this.login = login;
-		this.senha = senha;
-		this.nome = nome;
-		this.cpf = cpf;
-		this.email = email;
+		setLogin(login);
+		setSenha(senha);
+		setNome(nome);
+		setCpf(cpf);
+		setEmail(email);
 	}
 	
 	public String getLogin() {

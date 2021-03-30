@@ -10,11 +10,11 @@ public class Responsavel {
 	private Calendar dataDeCadastro;
 	
 public Responsavel(String nome,String telefone,String endereco,Usuario usuario,Calendar dataDeCadastro){
-	this.nome = nome;
-	this.telefone = telefone;
-	this.endereco = endereco;
-	this.usuario = usuario;
-	this.dataDeCadastro = dataDeCadastro;
+	setNome(nome);
+	setTelefone(telefone);
+	setEndereco(endereco);
+	setUsuario(usuario);
+	setDataDeCadastro(dataDeCadastro);
 }
 
 public String getNome() {
@@ -61,10 +61,10 @@ public Usuario getUsuario(){
 		}
 	}
 
-public Calendar getdataDeCadastro() {
+public Calendar getDataDeCadastro() {
     	return this.dataDeCadastro;
     }
-    public void setdataDeCadastro(Calendar novo) {
+    public void setDataDeCadastro(Calendar novo) {
     	this.dataDeCadastro = novo;
     }
 

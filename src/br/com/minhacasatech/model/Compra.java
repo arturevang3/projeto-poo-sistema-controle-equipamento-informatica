@@ -12,13 +12,13 @@ public class Compra {
 	private String tipoDePagamento;
 	
 	public Compra(Fornecedor fornecedor,Equipamento equipamento,Responsavel responsavel,int quantidade,float valor,Calendar dataDaCompra,String tipoDePagamento){
-		this.fornecedor = fornecedor;
-		this.equipamento = equipamento;
-		this.responsavel = responsavel;
-		this.quantidade = quantidade;
-		this.valor = valor;
-		this.dataDaCompra = dataDaCompra;
-		this.tipoDePagamento = tipoDePagamento;
+		setFornecedor(fornecedor);
+		setEquipamento(equipamento);
+		setResponsavel(responsavel);
+		setQuantidade(quantidade);
+		setValor(valor);
+		setDataDaCompra(dataDaCompra);
+		setTipoDePagamento(tipoDePagamento);
 	}
 
 	public Fornecedor getFornecedor(){
@@ -76,17 +76,17 @@ public int getQuantidade(){
     	}
     }
 
- public Calendar getdataDaCompra() {
+ public Calendar getDataDaCompra() {
     	return this.dataDaCompra;
     }
-    public void setdataDaCompra(Calendar novo) {
+    public void setDataDaCompra(Calendar novo) {
     	this.dataDaCompra = novo;
     }
 
-public String gettipoDePagamento() {
+public String getTipoDePagamento() {
     	return this.tipoDePagamento;
     }
-    public void settipoDePagamento(String novo) {
+    public void setTipoDePagamento(String novo) {
     	if (novo == "" || novo == null) {
     		System.out.println("O tipo de pagamento não foi informado, por favor informe-o.");
     	} else {

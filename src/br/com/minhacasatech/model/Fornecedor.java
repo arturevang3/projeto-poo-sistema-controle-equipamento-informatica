@@ -10,11 +10,11 @@ public class Fornecedor {
 	private Equipamento equipamento;
 	
 	public Fornecedor(String nome,String cpf,String endereco,Calendar dataDeCadastro,Equipamento equipamento){
-		this.nome = nome;
-		this.cpf = cpf;
-		this.endereco = endereco;
-		this.dataDeCadastro = dataDeCadastro;
-		this.equipamento = equipamento;
+		setNome(nome);
+		setCpf(cpf);
+		setEndereco(endereco);
+		setDataDeCadastro(dataDeCadastro);
+		setEquipamento(equipamento);
 	}
 
 public String getNome() {
@@ -51,10 +51,10 @@ public String getEndereco(){
         }  
     }
 
-public Calendar getdataDeCadastro() {
+public Calendar getDataDeCadastro() {
     	return this.dataDeCadastro;
     }
-    public void setdataDeCadastro(Calendar novo) {
+    public void setDataDeCadastro(Calendar novo) {
     	this.dataDeCadastro = novo;
     }
 

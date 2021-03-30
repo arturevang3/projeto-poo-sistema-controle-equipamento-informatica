@@ -12,13 +12,13 @@ public class Compra {
 	private String tipoDePagamento;
 	
 	public Compra(Fornecedor fornecedor,Equipamento equipamento,Responsavel responsavel,int quantidade,float valor,Calendar dataDaCompra,String tipoDePagamento){
-		this.fornecedor = fornecedor;
-		this.equipamento = equipamento;
-		this.responsavel = responsavel;
-		this.quantidade = quantidade;
-		this.valor = valor;
-		this.dataDaCompra = dataDaCompra;
-		this.tipoDePagamento = tipoDePagamento;
+		setFornecedor(fornecedor);
+		setEquipamento(equipamento);
+		setResponsavel(responsavel);
+		setQuantidade(quantidade);
+		setValor(valor);
+		setDataDaCompra(dataDaCompra);
+		setTipoDePagamento(tipoDePagamento);
 	}
 
 	public Fornecedor getFornecedor(){

@@ -9,10 +9,10 @@ public class Cliente {
 	private Calendar dataDeCadastro;
 	
 	public Cliente(String nome,String cpf,String endereco,Calendar dataDeCadastro){
-		this.nome = nome;
-		this.cpf = cpf;
-		this.endereco = endereco;
-		this.dataDeCadastro = dataDeCadastro;
+		setNome(nome);
+		setCpf(cpf);
+		setEndereco(endereco);
+		setDataDeCadastro(dataDeCadastro);
 	}
 		 
 		public String getNome(){

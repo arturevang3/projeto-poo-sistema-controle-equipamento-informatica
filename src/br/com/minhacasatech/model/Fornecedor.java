@@ -10,11 +10,11 @@ public class Fornecedor {
 	private Equipamento equipamento;
 	
 	public Fornecedor(String nome,String cpf,String endereco,Calendar dataDeCadastro,Equipamento equipamento){
-		this.nome = nome;
-		this.cpf = cpf;
-		this.endereco = endereco;
-		this.dataDeCadastro = dataDeCadastro;
-		this.equipamento = equipamento;
+		setNome(nome);
+		setCpf(cpf);
+		setEndereco(endereco);
+		setDataDeCadastro(dataDeCadastro);
+		setEquipamento(equipamento);
 	}
 
 public String getNome() {

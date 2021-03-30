@@ -76,17 +76,17 @@ public int getQuantidade(){
     	}
     }
 
- public Calendar getdataDaCompra() {
+ public Calendar getDataDaCompra() {
     	return this.dataDaCompra;
     }
-    public void setdataDaCompra(Calendar novo) {
+    public void setDataDaCompra(Calendar novo) {
     	this.dataDaCompra = novo;
     }
 
-public String gettipoDePagamento() {
+public String getTipoDePagamento() {
     	return this.tipoDePagamento;
     }
-    public void settipoDePagamento(String novo) {
+    public void setTipoDePagamento(String novo) {
     	if (novo == "" || novo == null) {
     		System.out.println("O tipo de pagamento não foi informado, por favor informe-o.");
     	} else {

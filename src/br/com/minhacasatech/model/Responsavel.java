@@ -61,10 +61,10 @@ public Usuario getUsuario(){
 		}
 	}
 
-public Calendar getdataDeCadastro() {
+public Calendar getDataDeCadastro() {
     	return this.dataDeCadastro;
     }
-    public void setdataDeCadastro(Calendar novo) {
+    public void setDataDeCadastro(Calendar novo) {
     	this.dataDeCadastro = novo;
     }
 

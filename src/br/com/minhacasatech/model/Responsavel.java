@@ -1,71 +1,73 @@
 package br.com.minhacasatech.model;
 
-import java.util.Calendar;
-
 public class Responsavel {
-	private String nome;
-	private String telefone;
-	private String endereco;
-	private Usuario usuario;
-	private Calendar dataDeCadastro;
+	private String nomeDoResponsavel;
+	private String telefoneDoResponsavel;
+	private String enderecoDoResponsavel;
+	private int codigoUsuario;
+	private int codigoResponsavel;
 	
-public Responsavel(String nome,String telefone,String endereco,Usuario usuario,Calendar dataDeCadastro){
-	setNome(nome);
-	setTelefone(telefone);
-	setEndereco(endereco);
-	setUsuario(usuario);
-	setDataDeCadastro(dataDeCadastro);
+public Responsavel(String nomeDoResponsavel,String telefoneDoResponsavel,String enderecoDoResponsavel,int codigoUsuario,int codigoResponsavel){
+	setNomeDoResponsavel(nomeDoResponsavel);
+	setTelefoneDoResponsavel(telefoneDoResponsavel);
+	setEnderecoDoResponsavel(enderecoDoResponsavel);
+	setCodigoUsuario(codigoUsuario);
+	setCodigoResponsavel(codigoResponsavel);
 }
 
-public String getNome() {
-		return this.nome;
+public String getNomeDoResponsavel() {
+		return this.nomeDoResponsavel;
 	}
-	public void setNome(String novo) {
+	public void setNomeDoResponsavel(String novo) {
 		if (novo == ""|| novo == null) {
-			System.out.println("O nome n√£o foi informado, por favor informe-o.");
+			System.out.println("O nome do respons·vel n„o foi informado, por favor informe-o.");
 		} else {
-			this.nome = novo;
+			this.nomeDoResponsavel = novo;
 		}
 	}
 
-public String getTelefone(){
-		return this.telefone;
+public String getTelefoneDoResponsavel(){
+		return this.telefoneDoResponsavel;
 	}
-	    public void setTelefone(String novo){
+	    public void setTelefoneDoResponsavel(String novo){
         if (novo == "" || novo == null){
-            System.out.println("O Telefone n√£o foi informado, por favor informe-o.");
+            System.out.println("O telefone do responsavel n„o foi informado, por favor informe-o.");
         } else{
-            this.telefone = novo;
+            this.telefoneDoResponsavel = novo;
         }
     }
 
-public String getEndereco(){
-		return this.endereco;
+public String getEnderecoDoResponsavel(){
+		return this.enderecoDoResponsavel;
 	}
-	    public void setEndereco(String novo){
+	    public void setEnderecoDoResponsavel(String novo){
         if (novo == "" || novo == null){
-            System.out.println("O endere√ßo n√£o foi informado, por favor informe-o.");
+            System.out.println("O endereÁo n„o foi informado, por favor informe-o.");
         } else{
-            this.endereco = novo;
+            this.enderecoDoResponsavel = novo;
         }  
     }
 
-public Usuario getUsuario(){
-		return this.usuario;
+public int getCodigoUsuario(){
+		return this.codigoUsuario;
 	}
-	public void setUsuario(Usuario novo) {
-		if (novo == null) {
-			System.out.println("Usu√°rio n√£o foi informado, por favor informe-o.");
+	public void setCodigoUsuario(int novo) {
+		if (novo == 0) {
+			System.out.println("O cÛdigo de usu·rio n„o foi informado, por favor informe-o.");
 		} else {
-			this.usuario = novo;
+			this.codigoUsuario = novo;
 		}
 	}
 
-public Calendar getDataDeCadastro() {
-    	return this.dataDeCadastro;
+public int getCodigoResponsavel() {
+    	return this.codigoResponsavel;
     }
-    public void setDataDeCadastro(Calendar novo) {
-    	this.dataDeCadastro = novo;
+    public void setCodigoResponsavel(int novo) {
+    	if (novo == 0) {
+    		System.out.println("O cÛdigo de respons·vel n„o foi informado, por favor informe-o");
+    	} else {
+    		this.codigoResponsavel = novo;
+    	}
     }
 
 }

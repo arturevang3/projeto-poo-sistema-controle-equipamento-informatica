@@ -1,9 +1,12 @@
 package br.com.minhacasatech.model;
 
-public class PesquisaFornecedor{
+import br.com.minhacasatech.DAO.FornecedorDAO;
+
+public class PesquisaFornecedor implements Pesquisa{
 	
-	public void pesquisar(Fornecedor fornecedor){
-	
+	public void pesquisar(Fornecedor fornecedor) {
+		FornecedorDAO fornecedordao = new FornecedorDAO();
+		fornecedordao.pesquisar(fornecedor);
 	}
 
 }

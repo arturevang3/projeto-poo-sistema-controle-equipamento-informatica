@@ -3,51 +3,51 @@ package br.com.minhacasatech.model;
 import java.util.Calendar;
 
 public class Fornecedor {
-	private String nome;
-	private String cpf;
-	private String endereco;
+	private String nomeDoFornecedor;
+	private String cpfDoFornecedor;
+	private String enderecoDoFornecedor;
 	private Calendar dataDeCadastro;
-	private Equipamento equipamento;
+	private int codigoFornecedor;
 	
-	public Fornecedor(String nome,String cpf,String endereco,Calendar dataDeCadastro,Equipamento equipamento){
-		setNome(nome);
-		setCpf(cpf);
-		setEndereco(endereco);
+	public Fornecedor(String nomeDoFornecedor,String cpfDoFornecedor,String enderecoDoFornecedor,Calendar dataDeCadastro, int codigoFornecedor){
+		setNomeDoFornecedor(nomeDoFornecedor);
+		setCpfDoFornecedor(cpfDoFornecedor);
+		setEnderecoDoFornecedor(enderecoDoFornecedor);
 		setDataDeCadastro(dataDeCadastro);
-		setEquipamento(equipamento);
+		setCodigoFornecedor(codigoFornecedor);
 	}
 
-public String getNome() {
-		return this.nome;
+public String getNomeDoFornecedor() {
+		return this.nomeDoFornecedor;
 	}
-	public void setNome(String novo) {
+	public void setNomeDoFornecedor(String novo) {
 		if (novo == ""|| novo == null) {
-			System.out.println("Nome n√£o foi informado, por favor informe-o.");
+			System.out.println("nomeDoFornecedor n„o foi informado, por favor informe-o.");
 		} else {
-			this.nome = novo;
+			this.nomeDoFornecedor = novo;
 		}
 	}
 
-public String getCpf() {
-		return this.cpf;
+public String getCpfDoFornecedor() {
+		return this.cpfDoFornecedor;
 	}
 	
-	public void setCpf(String novo) {
+	public void setCpfDoFornecedor(String novo) {
 		if (novo == "" || novo == null) {
-			System.out.println("Cpf n√£o foi informado, por favor informe-o.");
+			System.out.println("cpfDoFornecedor n„o foi informado, por favor informe-o.");
 		} else {
-			this.cpf = novo;
+			this.cpfDoFornecedor = novo;
 		}
 	}
 
-public String getEndereco(){
-		return this.endereco;
+public String getEnderecoDoFornecedor(){
+		return this.enderecoDoFornecedor;
 	}
-	    public void setEndereco(String novo){
+	    public void setEnderecoDoFornecedor(String novo){
         if (novo == "" || novo == null){
-            System.out.println("O endere√ßo n√£o foi informado, por favor informe-o.");
+            System.out.println("O endereÁo n„o foi informado, por favor informe-o.");
         } else{
-            this.endereco = novo;
+            this.enderecoDoFornecedor = novo;
         }  
     }
 
@@ -57,16 +57,18 @@ public Calendar getDataDeCadastro() {
     public void setDataDeCadastro(Calendar novo) {
     	this.dataDeCadastro = novo;
     }
+    
+public int getCodigoFornecedor(){
+        return this.codigoFornecedor;
+    } 
+    public void setCodigoFornecedor(int novo){
+    	if (novo == 0) {
+    		System.out.println("O cÛdigo do respons·vel n„o foi informado, por favor informe-o.");
+    	} else {
+    		this.codigoFornecedor = novo;
+    	}
+        
+    }
 
-public Equipamento getEquipamento(){
-		return this.equipamento;
-	}
-	public void setEquipamento(Equipamento novo) {
-		if (novo == null) {
-			System.out.println("Equipamento n√£o foi informado, por favor informe-o.");
-		} else {
-			this.equipamento = novo;
-		}
-	}
 
 }

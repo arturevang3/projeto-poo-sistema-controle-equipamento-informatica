@@ -58,3 +58,51 @@ public class Main {
 		System.out.println("compartimento: "+local.getCompartimento());
 		System.out.println("codigo de local: "+local.getCodigoLocal());
 		
+		System.out.println("\n\n");
+		System.out.println("Informações de Cliente");
+		//relacionamento de cliente
+		System.out.println("nome do cliente: "+cliente.getNomeDoCliente());
+		System.out.println("cpf do cliente: "+cliente.getCpfDoCliente());
+		System.out.println("endereço do cliente: "+cliente.getEnderecoDoCliente());
+		System.out.println("data de cadastro: "+cliente.getDataDeCadastro().getTime());
+		System.out.println("codigo do cliente: "+cliente.getCodigoCliente());
+		
+		System.out.println("\n\n");
+		System.out.println("Informações de fornecedor");
+		//relacionamento de fornecedor
+		Fornecedor fornecedor = new Fornecedor("Pedro", "098.876.654-90", "Rua Francisco Mota", Calendar.getInstance(), 67);
+		System.out.println("nome do fornecedor: "+fornecedor.getNomeDoFornecedor());
+		System.out.println("cpf do fornecedor: "+fornecedor.getCpfDoFornecedor());
+		System.out.println("endereço do fornecedor: "+fornecedor.getEnderecoDoFornecedor());
+		System.out.println("data de cadastro: "+fornecedor.getDataDeCadastro().getTime());
+		System.out.println("codigo do fornecedor: "+fornecedor.getCodigoFornecedor());
+		
+		System.out.println("\n\n");
+		System.out.println("Informações de compra");
+		//relacionamento de compra
+		Compra compra = new Compra(fornecedor.getCodigoFornecedor(),equipamento.getCodigoEquipamento(), responsavel.getCodigoResponsavel(), 2, 1200f, Calendar.getInstance(), "cartão");
+		compra.setValorTotal();
+		System.out.println("codigo do fornecedor: "+compra.getCodigoFornecedor());
+		System.out.println("codigo do equipamento: "+compra.getCodigoEquipamento());
+		System.out.println("codigo de responsavel: "+compra.getCodigoResponsavel());
+		System.out.println("quantidade: "+compra.getQuantidade());
+		System.out.println("valor unitario: "+compra.getValorUnitario());
+		System.out.println("valor total: "+compra.getValorTotal());
+		System.out.println("data da compra: "+compra.getDataDaCompra().getTime());
+		System.out.println("forma de pagamento: "+compra.getFormaDePagamento());
+		
+		System.out.println("\n\n");
+		System.out.println("Informações de responsavel");
+		//relacionamento de responsavel
+		System.out.println("nome do responsavel: "+responsavel.getNomeDoResponsavel());
+		System.out.println("numero de telefone do responsavel: "+responsavel.getTelefoneDoResponsavel());
+		System.out.println("endereço do responsavel: "+responsavel.getEnderecoDoResponsavel());
+		System.out.println("código do usuário: "+responsavel.getCodigoUsuario());
+		System.out.println("código do responsável: "+responsavel.getCodigoResponsavel());
+		
+		
+	}
+
+}
+
+		

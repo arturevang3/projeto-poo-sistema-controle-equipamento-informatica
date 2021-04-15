@@ -22,7 +22,7 @@ public String getNomeDoFornecedor() {
 	}
 	public void setNomeDoFornecedor(String novo) {
 		if (novo == ""|| novo == null) {
-			System.out.println("nomeDoFornecedor não foi informado, por favor informe-o.");
+			System.out.println("O nome do fornecedor não foi informado, por favor informe-o.");
 		} else {
 			this.nomeDoFornecedor = novo;
 		}
@@ -34,7 +34,7 @@ public String getCpfDoFornecedor() {
 	
 	public void setCpfDoFornecedor(String novo) {
 		if (novo == "" || novo == null) {
-			System.out.println("cpfDoFornecedor não foi informado, por favor informe-o.");
+			System.out.println("O cpf do fornecedor não foi informado, por favor informe-o.");
 		} else {
 			this.cpfDoFornecedor = novo;
 		}

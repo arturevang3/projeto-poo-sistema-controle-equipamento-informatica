@@ -3,54 +3,55 @@ package br.com.minhacasatech.model;
 import java.util.Calendar;
 
 public class Compra {
-	private Fornecedor fornecedor;
-	private Equipamento equipamento;
-	private Responsavel responsavel;
+	private int codigoFornecedor;
+	private int codigoEquipamento;
+	private int codigoResponsavel;
 	private int quantidade;
-	private float valor;
+	private float valorUnitario;
+	private float valorTotal;
 	private Calendar dataDaCompra;
-	private String tipoDePagamento;
+	private String formaDePagamento;
 	
-	public Compra(Fornecedor fornecedor,Equipamento equipamento,Responsavel responsavel,int quantidade,float valor,Calendar dataDaCompra,String tipoDePagamento){
-		setFornecedor(fornecedor);
-		setEquipamento(equipamento);
-		setResponsavel(responsavel);
+	public Compra(int codigoFornecedor,int codigoEquipamento,int codigoResponsavel,int quantidade,float valorUnitario, Calendar dataDaCompra,String formaDePagamento){
+		setCodigoFornecedor(codigoFornecedor);
+		setCodigoEquipamento(codigoEquipamento);
+		setCodigoResponsavel(codigoResponsavel);
 		setQuantidade(quantidade);
-		setValor(valor);
+		setValorUnitario(valorUnitario);
 		setDataDaCompra(dataDaCompra);
-		setTipoDePagamento(tipoDePagamento);
+		setFormaDePagamento(formaDePagamento);
 	}
 
-	public Fornecedor getFornecedor(){
-		return this.fornecedor;
+	public int getCodigoFornecedor(){
+		return this.codigoFornecedor;
 	}
-	public void setFornecedor(Fornecedor novo) {
-		if (novo == null) {
-			System.out.println("Fornecedor n√£o foi informado, por favor informe-o.");
+	public void setCodigoFornecedor(int novo) {
+		if (novo == 0) {
+			System.out.println("O codigo do fornecedor n„o foi informado, por favor informe-o.");
 		} else {
-			this.fornecedor = novo;
+			this.codigoFornecedor = novo;
 		}
 	}
 
-	public Equipamento getEquipamento(){
-		return this.equipamento;
+	public int getCodigoEquipamento(){
+		return this.codigoEquipamento;
 	}
-	public void setEquipamento(Equipamento novo) {
-		if (novo == null) {
-			System.out.println("Equipamento n√£o foi informado, por favor informe-o.");
+	public void setCodigoEquipamento(int novo) {
+		if (novo == 0) {
+			System.out.println("O codigo do equipamento n„o foi informado, por favor informe-o.");
 		} else {
-			this.equipamento = novo;
+			this.codigoEquipamento = novo;
 		}
 	}
 
-public Responsavel getResponsavel(){
-		return this.responsavel;
+public int getCodigoResponsavel(){
+		return this.codigoResponsavel;
 	}
-	public void setResponsavel(Responsavel novo) {
-		if (novo == null) {
-			System.out.println("Respons√°vel n√£o foi informado, por favor informe-o.");
+	public void setCodigoResponsavel(int novo) {
+		if (novo == 0) {
+			System.out.println("O cÛdigo do respons·vel n„o foi informado, por favor informe-o.");
 		} else {
-			this.responsavel = novo;
+			this.codigoResponsavel = novo;
 		}
 	}	
 
@@ -58,23 +59,32 @@ public int getQuantidade(){
         return this.quantidade;
     }
     public void setQuantidade(int novo){
-    	if (quantidade == 0) {
-    		System.out.println("A quantidade n√£o foi informada, por favor informe-a.");
+    	if (novo == 0) {
+    		System.out.println("A quantidade n„o foi informada, por favor informe-a.");
     	} else {
     		this.quantidade = novo;
     	}   
     }
 
- public float getValor() {
-    	return this.valor;
+ public float getValorUnitario() {
+    	return this.valorUnitario;
     }
-    public void setValor(float novo) {
-    	if (valor == 0) {
-    		System.out.println("O valor n√£o foi informado, por favor informe-o.");
+    public void setValorUnitario(float novo) {
+    	if (novo == 0) {
+    		System.out.println("O valor unitario n„o foi informado, por favor informe-o.");
     	} else {
-    		this.valor = novo;
+    		this.valorUnitario = novo;
     	}
     }
+    
+    public float getValorTotal() {
+    	return this.valorTotal;
+    }
+    public void setValorTotal() {
+    		this.valorTotal = this.quantidade*this.valorUnitario;
+    	
+    }
+    
 
  public Calendar getDataDaCompra() {
     	return this.dataDaCompra;
@@ -83,14 +93,14 @@ public int getQuantidade(){
     	this.dataDaCompra = novo;
     }
 
-public String getTipoDePagamento() {
-    	return this.tipoDePagamento;
+public String getFormaDePagamento() {
+    	return this.formaDePagamento;
     }
-    public void setTipoDePagamento(String novo) {
+    public void setFormaDePagamento(String novo) {
     	if (novo == "" || novo == null) {
-    		System.out.println("O tipo de pagamento n√£o foi informado, por favor informe-o.");
+    		System.out.println("O tipo de pagamento n„o foi informado, por favor informe-o.");
     	} else {
-    		this.tipoDePagamento = novo;
+    		this.formaDePagamento = novo;
     	}
     }
 

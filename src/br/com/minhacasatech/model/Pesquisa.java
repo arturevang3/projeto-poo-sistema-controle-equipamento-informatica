@@ -1,8 +1,10 @@
 package br.com.minhacasatech.model;
 
-public class Pesquisa {
+import br.com.minhacasatech.DAO.*;
+
+public interface Pesquisa {
 	
-	public void pesquisar() {
+	public static void pesquisar() {
 		
 	}
 

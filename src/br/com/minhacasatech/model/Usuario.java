@@ -3,15 +3,15 @@ package br.com.minhacasatech.model;
 public class Usuario {
 	private String login;
 	private String senha;
-	private String nome;
-	private String cpf;
+	private String nomeDoUsuario;
+	private int codigoUsuario;
 	private String email;
 	
-	public Usuario(String login, String senha, String nome, String cpf, String email) {
+	public Usuario(String login, String senha, String nomeDoUsuario, int codigoUsuario, String email) {
 		setLogin(login);
 		setSenha(senha);
-		setNome(nome);
-		setCpf(cpf);
+		setNomeDoUsuario(nomeDoUsuario);
+		setCodigoUsuario(codigoUsuario);
 		setEmail(email);
 	}
 	
@@ -37,25 +37,25 @@ public class Usuario {
 		}
 	}
 	
-	public String getNome() {
-		return this.nome;
+	public String getNomeDoUsuario() {
+		return this.nomeDoUsuario;
 	}
-	public void setNome(String novo) {
+	public void setNomeDoUsuario(String novo) {
 		if (novo == ""|| novo == null) {
-			System.out.println("Nome não foi informado, por favor informe-o.");
+			System.out.println("nomeDoUsuario não foi informado, por favor informe-o.");
 		} else {
-			this.nome = novo;
+			this.nomeDoUsuario = novo;
 		}
 	}
 	
-	public String getCpf() {
-		return this.cpf;
+	public int getCodigoUsuario() {
+		return this.codigoUsuario;
 	}
-	public void setCpf(String novo) {
-		if (novo == "" || novo == null) {
-			System.out.println("Cpf não foi informado, por favor informe-o.");
+	public void setCodigoUsuario(int novo) {
+		if (novo == 0) {
+			System.out.println("O codigo de usuario não foi informado, por favor informe-o.");
 		} else {
-			this.cpf = novo;
+			this.codigoUsuario = novo;
 		}
 	}
 	

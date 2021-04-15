@@ -2,34 +2,34 @@ package br.com.minhacasatech.model;
 
 public class Equipamento{
 
-    private String nome;
+    private String nomeDeEquipamento;
     private float peso;
-    private String serie;
+    private String numeroDeSerie;
     private int quantidade;
     private float preco;
-    private Local local;
-    private Responsavel responsavel;
-    private Fornecedor fornecedor;
+    private int codigoLocal;
+    private int codigoResponsavel;
+    private int codigoEquipamento;
     
-    public Equipamento(String nome,float peso,String serie,int quantidade,float preco,Local local,Responsavel responsavel,Fornecedor fornecedor) {
-        setNome(nome);
-        setPeso(peso);
-        setSerie(serie);
-        setQuantidade(quantidade);
-        setPreco(preco);
-        setLocal(local);
-        setResponsavel(responsavel);
-        setFornecedor(fornecedor);
+    public Equipamento(String nomeDeEquipamento,float peso,String numeroDeSerie,int quantidade,float preco,int codigoLocal,int codigoResponsavel,int codigoEquipamento) {
+    	setNomeDeEquipamento(nomeDeEquipamento);
+    	setPeso(peso);
+    	setNumeroDeSerie(numeroDeSerie);
+    	setQuantidade(quantidade);
+    	setPreco(preco);
+    	setCodigoLocal(codigoLocal);
+    	setCodigoResponsavel(codigoResponsavel);
+    	setCodigoEquipamento(codigoEquipamento);
     }
 
-    public String getNome(){
-        return this.nome;
+    public String getNomeDeEquipamento(){
+        return this.nomeDeEquipamento;
     }
-    public void setNome(String novo){
+    public void setNomeDeEquipamento(String novo){
         if (novo == "" || novo == null){
-            System.out.println("O nome não foi informado, por favor informe o nome.");
+            System.out.println("O nome do equipamento não foi informado, por favor informe-o.");
         } else{
-            this.nome = novo;
+            this.nomeDeEquipamento = novo;
         }
         
     }
@@ -38,22 +38,22 @@ public class Equipamento{
         return this.peso;
     }
     public void setPeso(float novo){
-        if (peso == 0){
-            System.out.println("O peso não foi informado, por favor informe o peso");
+        if (novo == 0){
+            System.out.println("O peso não foi informado, por favor informe-o");
         } else{
             this.peso = novo;
         }
         
     }
 
-    public String getSerie(){
-        return this.serie;
+    public String getNumeroDeSerie(){
+        return this.numeroDeSerie;
     }
-    public void setSerie(String novo){
+    public void setNumeroDeSerie(String novo){
         if (novo == "" || novo == null){
-            System.out.println("A série não foi informada, por favor informe a série.");
+            System.out.println("A série não foi informada, por favor informe-a.");
         } else{
-            this.serie = novo;
+            this.numeroDeSerie = novo;
         }
         
     }
@@ -62,8 +62,8 @@ public class Equipamento{
         return this.quantidade;
     }
     public void setQuantidade(int novo){
-    	if (quantidade == 0) {
-    		System.out.println("A quantidade não foi informada, por favor informe a quantidade.");
+    	if (novo == 0) {
+    		System.out.println("A quantidade não foi informada, por favor informe-a.");
     	} else {
     		this.quantidade = novo;
     	}
@@ -74,45 +74,45 @@ public class Equipamento{
     	return this.preco;
     }
     public void setPreco(float novo) {
-    	if (preco == 0) {
-    		System.out.println("O preço não foi informado, por favor informe o preço");
+    	if (novo == 0) {
+    		System.out.println("O preço não foi informado, por favor informe-o");
     	} else {
     		this.preco = novo;
     	}
     }
 
-    public Local getLocal(){
-        return this.local;
+    public int getCodigoLocal(){
+        return this.codigoLocal;
     }
-    public void setLocal(Local novo){
-    	if (novo == null) {
-    		System.out.println("O local não foi informado, por favor informe o local.");
+    public void setCodigoLocal(int novo){
+    	if (novo == 0) {
+    		System.out.println("O código do local não foi informado, por favor informe-o.");
     	} else {
-    		this.local = novo;
+    		this.codigoLocal = novo;
     	}
         
     }
 
-    public Responsavel getResponsavel(){
-        return this.responsavel;
+    public int getCodigoResponsavel(){
+        return this.codigoResponsavel;
     } 
-    public void setResponsavel(Responsavel novo){
-    	if (novo == null) {
-    		System.out.println("O responsável não foi informado, por favor informe o responsável.");
+    public void setCodigoResponsavel(int novo){
+    	if (novo == 0) {
+    		System.out.println("O código do responsável não foi informado, por favor informe-o.");
     	} else {
-    		this.responsavel = novo;
+    		this.codigoResponsavel = novo;
     	}
         
     }
 
-    public Fornecedor getFornecedor(){
-        return this.fornecedor;
+    public int getCodigoEquipamento(){
+        return this.codigoEquipamento;
     }
-    public void setFornecedor(Fornecedor novo){
-    	if (novo == null) {
-    		System.out.println("O fornecedor não foi informado, por favor informe o fornecedor.");
+    public void setCodigoEquipamento(int novo){
+    	if (novo == 0) {
+    		System.out.println("O codigo do equipamento não foi informado, por favor informe-o.");
     	} else {
-    		this.fornecedor = novo;
+    		this.codigoEquipamento = novo;
     	}
         
     }

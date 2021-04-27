@@ -126,6 +126,12 @@ public class Main {
 		System.out.println("\n\n\n");
 		System.out.println("Usando as classes DAO");
 		
+		ClienteDAO cdao = new ClienteDAO();
+		cdao.salvar(cliente);
+		cdao.salvar(cliente1);
+		cdao.salvar(cliente2);
+		cdao.salvar(cliente3);
+		cdao.pesquisar(cliente);
 		
 		EquipamentoDAO edao = new EquipamentoDAO();
 		edao.salvar(equipamento);
@@ -142,6 +148,18 @@ public class Main {
 		LocalDAO ldao = new LocalDAO();
 		ldao.salvar(local);
 		ldao.pesquisar(local);
+		
+		FornecedorDAO fdao = new FornecedorDAO();
+		fdao.salvar(fornecedor);
+		fdao.pesquisar(fornecedor);
+		
+		CompraDAO cpdao = new CompraDAO();
+		cpdao.salvar(compra);
+		cpdao.pesquisar(compra);
+		
+		ResponsavelDAO rdao = new ResponsavelDAO();
+		rdao.salvar(responsavel);
+		rdao.pesquisar(responsavel);
 		
 	}
 

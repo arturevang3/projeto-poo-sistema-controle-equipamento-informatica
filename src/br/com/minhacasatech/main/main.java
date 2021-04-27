@@ -57,4 +57,27 @@ public class Main {
 		System.out.println("casa: "+local.getCasa());
 		System.out.println("compartimento: "+local.getCompartimento());
 		System.out.println("codigo de local: "+local.getCodigoLocal());
+
+		System.out.println("\n\n\n");
+		System.out.println("Usando as classes DAO");
+
+		EquipamentoDAO edao = new EquipamentoDAO();
+		edao.salvar(equipamento);
+		edao.pesquisar(equipamento);
 		
+		VendaDAO vdao = new VendaDAO();
+		vdao.salvar(venda);
+		vdao.pesquisar(venda);
+		
+		UsuarioDAO udao = new UsuarioDAO();
+		udao.salvar(usuario);
+		udao.pesquisar(usuario);
+		
+		LocalDAO ldao = new LocalDAO();
+		ldao.salvar(local);
+		ldao.pesquisar(local);
+		
+	}
+
+}
+

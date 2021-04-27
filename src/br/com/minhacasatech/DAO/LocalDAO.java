@@ -5,27 +5,43 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class LocalDAO {
-	private ArrayList <Local> locais;
+	private ArrayList <Local> locais = new ArrayList<Local>();
 	File arq;
 	FileWriter writer;
 	PrintWriter escrever;
-	String texto;
+	String texto = "";
 	FileReader reader;
 	BufferedReader ler;
 	
+	//carregar e salvar as informações de arquivo de texto no ArrayList
+	public ArrayList <Local> getLocais(ArrayList <Local> locais){
+		return locais;
+	}
+			
+	public void setLocais(ArrayList <Local> locais){
+		this.locais = locais;
+	} 
+	
 	
 	public void salvar(Local local) {
-		locais.add(local);
+		this.locais.add(local);
 		try {
 			arq = new File("locais.txt");
 			writer = new FileWriter(arq);
 			escrever = new PrintWriter(writer);
-			escrever.print(locais);
+			String linha = "";
+			for(int i = 0; i < locais.size();i++) {
+				linha = linha + "casa:" + locais.get(i).getCasa()+";";
+				linha = linha + "compartimento:" + locais.get(i).getCompartimento()+";";
+				linha = linha + "codigo:" + locais.get(i).getCodigoLocal()+";";
+			}
+			escrever.print(linha);
 			escrever.close();
 			writer.close();
 			
 		} catch(IOException e) {e.printStackTrace();}
 	}
+		 
 	
 	public boolean pesquisar(Local local) {
 		try{

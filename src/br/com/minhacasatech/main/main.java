@@ -57,11 +57,82 @@ public class Main {
 		System.out.println("casa: "+local.getCasa());
 		System.out.println("compartimento: "+local.getCompartimento());
 		System.out.println("codigo de local: "+local.getCodigoLocal());
-<<<<<<< HEAD
 
+		System.out.println("\n\n");
+		System.out.println("Informações de Cliente");
+		Cliente cliente1 = new Cliente("maria", "034.098.345-24", "Rua José Dias", Calendar.getInstance(), 6);
+		Cliente cliente2 = new Cliente("laura", "034.098.345-24", "Rua Francisco Dias", Calendar.getInstance(), 7);
+		Cliente cliente3 = new Cliente("silvia", "034.098.345-26", "Rua Mauro Dias", Calendar.getInstance(), 8);
+		
+		//relacionamento de cliente
+		System.out.println("nome do cliente: "+cliente.getNome());
+		System.out.println("cpf do cliente: "+cliente.getCpf());
+		System.out.println("endereço do cliente: "+cliente.getEndereco());
+		System.out.println("data de cadastro: "+cliente.getDataDeCadastro().getTime());
+		System.out.println("código do cliente: "+cliente.getCodigoCliente());
+					
+		System.out.println("nome do cliente: "+cliente1.getNome());
+		System.out.println("cpf do cliente: "+cliente1.getCpf());
+		System.out.println("endereço do cliente: "+cliente1.getEndereco());
+		System.out.println("data de cadastro: "+cliente1.getDataDeCadastro().getTime());
+		System.out.println("código do cliente: "+cliente1.getCodigoCliente());
+					
+		System.out.println("nome do cliente: "+cliente2.getNome());
+		System.out.println("cpf do cliente: "+cliente2.getCpf());
+		System.out.println("endereço do cliente: "+cliente2.getEndereco());
+		System.out.println("data de cadastro: "+cliente2.getDataDeCadastro().getTime());
+		System.out.println("código do cliente: "+cliente2.getCodigoCliente());
+					
+		System.out.println("nome do cliente: "+cliente3.getNome());
+		System.out.println("cpf do cliente: "+cliente3.getCpf());
+		System.out.println("endereço do cliente: "+cliente3.getEndereco());
+		System.out.println("data de cadastro: "+cliente3.getDataDeCadastro().getTime());
+		System.out.println("código do cliente: "+cliente3.getCodigoCliente());
+			
+		
+		System.out.println("\n\n");
+		System.out.println("Informações de fornecedor");
+		//relacionamento de fornecedor
+		Fornecedor fornecedor = new Fornecedor("Pedro", "098.876.654-90", "Rua Francisco Mota", Calendar.getInstance(), 67);
+		System.out.println("nome do fornecedor: "+fornecedor.getNome());
+		System.out.println("cpf do fornecedor: "+fornecedor.getCpf());
+		System.out.println("endereço do fornecedor: "+fornecedor.getEndereco());
+		System.out.println("data de cadastro: "+fornecedor.getDataDeCadastro().getTime());
+		System.out.println("código do fornecedor: "+fornecedor.getCodigoFornecedor());
+					
+		System.out.println("\n\n");
+		System.out.println("Informações de compra");
+		//relacionamento de compra
+		Compra compra = new Compra(fornecedor.getCodigoFornecedor(),equipamento.getCodigoEquipamento(), responsavel.getCodigoResponsavel(), 2, 1200f, Calendar.getInstance(), "cartão");
+		compra.setValorTotal();
+		System.out.println("código do fornecedor: "+compra.getCodigoFornecedor());
+		System.out.println("código do equipamento: "+compra.getCodigoEquipamento());
+		System.out.println("código de responsável: "+compra.getCodigoResponsavel());
+		System.out.println("quantidade: "+compra.getQuantidade());
+		System.out.println("valor unitário: "+compra.getValorUnitario());
+		System.out.println("valor total: "+compra.getValorTotal());
+		System.out.println("data da compra: "+compra.getDataDaCompra().getTime());
+		System.out.println("forma de pagamento: "+compra.getFormaDePagamento());
+					
+		System.out.println("\n\n");
+		System.out.println("Informações de responsável");
+		//relacionamento de responsavel
+		System.out.println("nome do responsável: "+responsavel.getNome());
+		System.out.println("número de telefone do responsável: "+responsavel.getTelefoneDoResponsavel());
+		System.out.println("endereço do responsável: "+responsavel.getEndereco());
+		System.out.println("código do usuário: "+responsavel.getCodigoUsuario());
+		System.out.println("código do responsável: "+responsavel.getCodigoResponsavel());
+		
 		System.out.println("\n\n\n");
 		System.out.println("Usando as classes DAO");
 
+		ClienteDAO cdao = new ClienteDAO();
+		cdao.salvar(cliente);
+		cdao.salvar(cliente1);
+		cdao.salvar(cliente2);
+		cdao.salvar(cliente3);
+		cdao.pesquisar(cliente);
+		
 		EquipamentoDAO edao = new EquipamentoDAO();
 		edao.salvar(equipamento);
 		edao.pesquisar(equipamento);
@@ -78,56 +149,18 @@ public class Main {
 		ldao.salvar(local);
 		ldao.pesquisar(local);
 		
-	}
-
-}
-
-=======
+		FornecedorDAO fdao = new FornecedorDAO();
+		fdao.salvar(fornecedor);
+		fdao.pesquisar(fornecedor);
 		
-		System.out.println("\n\n");
-		System.out.println("Informações de Cliente");
-		//relacionamento de cliente
-		System.out.println("nome do cliente: "+cliente.getNomeDoCliente());
-		System.out.println("cpf do cliente: "+cliente.getCpfDoCliente());
-		System.out.println("endereço do cliente: "+cliente.getEnderecoDoCliente());
-		System.out.println("data de cadastro: "+cliente.getDataDeCadastro().getTime());
-		System.out.println("codigo do cliente: "+cliente.getCodigoCliente());
+		CompraDAO cpdao = new CompraDAO();
+		cpdao.salvar(compra);
+		cpdao.pesquisar(compra);
 		
-		System.out.println("\n\n");
-		System.out.println("Informações de fornecedor");
-		//relacionamento de fornecedor
-		Fornecedor fornecedor = new Fornecedor("Pedro", "098.876.654-90", "Rua Francisco Mota", Calendar.getInstance(), 67);
-		System.out.println("nome do fornecedor: "+fornecedor.getNomeDoFornecedor());
-		System.out.println("cpf do fornecedor: "+fornecedor.getCpfDoFornecedor());
-		System.out.println("endereço do fornecedor: "+fornecedor.getEnderecoDoFornecedor());
-		System.out.println("data de cadastro: "+fornecedor.getDataDeCadastro().getTime());
-		System.out.println("codigo do fornecedor: "+fornecedor.getCodigoFornecedor());
-		
-		System.out.println("\n\n");
-		System.out.println("Informações de compra");
-		//relacionamento de compra
-		Compra compra = new Compra(fornecedor.getCodigoFornecedor(),equipamento.getCodigoEquipamento(), responsavel.getCodigoResponsavel(), 2, 1200f, Calendar.getInstance(), "cartão");
-		compra.setValorTotal();
-		System.out.println("codigo do fornecedor: "+compra.getCodigoFornecedor());
-		System.out.println("codigo do equipamento: "+compra.getCodigoEquipamento());
-		System.out.println("codigo de responsavel: "+compra.getCodigoResponsavel());
-		System.out.println("quantidade: "+compra.getQuantidade());
-		System.out.println("valor unitario: "+compra.getValorUnitario());
-		System.out.println("valor total: "+compra.getValorTotal());
-		System.out.println("data da compra: "+compra.getDataDaCompra().getTime());
-		System.out.println("forma de pagamento: "+compra.getFormaDePagamento());
-		
-		System.out.println("\n\n");
-		System.out.println("Informações de responsavel");
-		//relacionamento de responsavel
-		System.out.println("nome do responsavel: "+responsavel.getNomeDoResponsavel());
-		System.out.println("numero de telefone do responsavel: "+responsavel.getTelefoneDoResponsavel());
-		System.out.println("endereço do responsavel: "+responsavel.getEnderecoDoResponsavel());
-		System.out.println("código do usuário: "+responsavel.getCodigoUsuario());
-		System.out.println("código do responsável: "+responsavel.getCodigoResponsavel());
-		
+		ResponsavelDAO rdao = new ResponsavelDAO();
+		rdao.salvar(responsavel);
+		rdao.pesquisar(responsavel);
 		
 	}
 
 }
->>>>>>> 7f0597c6bf078e582f3de004267586ae4f417bea

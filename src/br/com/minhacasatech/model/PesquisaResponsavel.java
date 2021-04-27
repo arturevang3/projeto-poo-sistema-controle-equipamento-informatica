@@ -1,9 +1,12 @@
 package br.com.minhacasatech.model;
 
-public class PesquisaResponsavel{
+import br.com.minhacasatech.DAO.*;
 
-	public void pesquisar(Responsavel responsavel){
+public class PesquisaResponsavel implements Pesquisa{
 	
-	}	
+	public void pesquisar(Responsavel responsavel) {
+		ResponsavelDAO responsaveldao = new ResponsavelDAO();
+		responsaveldao.pesquisar(responsavel);
+	}
 
 }

@@ -3,56 +3,72 @@ package br.com.minhacasatech.model;
 import java.util.Calendar;
 
 public class Cliente {
-	private String nome;
-	private String cpf;
-	private String endereco;
+	private String nomeDoCliente;
+	private String cpfDoCliente;
+	private String enderecoDoCliente;
 	private Calendar dataDeCadastro;
+	private int codigoCliente;
 	
-	public Cliente(String nome,String cpf,String endereco,Calendar dataDeCadastro){
-		setNome(nome);
-		setCpf(cpf);
-		setEndereco(endereco);
+	public Cliente(String nomeDoCliente,String cpfDoCliente,String enderecoDoCliente,Calendar dataDeCadastro, int codigoCliente){
+		setNomeDoCliente(nomeDoCliente);
+		setCpfDoCliente(cpfDoCliente);
+		setEnderecoDoCliente(enderecoDoCliente);
 		setDataDeCadastro(dataDeCadastro);
+		setCodigoCliente(codigoCliente);
 	}
 		 
-		public String getNome(){
-        return this.nome;
+		public String getNomeDoCliente(){
+        return this.nomeDoCliente;
     }
-	public void setNome(String novo){
+	public void setNomeDoCliente(String novo){
         if (novo == "" || novo == null){
-            System.out.println("O nome n√£o foi informado, por favor informe-o.");
+            System.out.println("O nome do cliente n„o foi informado, por favor informe-o.");
         } else{
-            this.nome = novo;
+            this.nomeDoCliente = novo;
         }    
     }
 
-    public String getCpf(){
-		return this.cpf;
+
+	public String getCpfDoCliente(){
+		return this.cpfDoCliente;
 	}
-	    public void setCpf(String novo){
+	    public void setCpfDoCliente(String novo){
         if (novo == "" || novo == null){
-            System.out.println("O CPF n√£o foi informado, por favor informe-o.");
+            System.out.println("O cpf do cliente n„o foi informado, por favor informe-o.");
         } else{
-            this.cpf = novo;
+            this.cpfDoCliente = novo;
         }
     }
 
- public String getEndereco(){
-		return this.endereco;
+	public String getEnderecoDoCliente(){
+		return this.enderecoDoCliente;
 	}
-	    public void setEndereco(String novo){
+	    public void setEnderecoDoCliente(String novo){
         if (novo == "" || novo == null){
-            System.out.println("O endere√ßo n√£o foi informado, por favor informe-o.");
+            System.out.println("O endereÁo do cliente n„o foi informado, por favor informe-o.");
         } else{
-            this.endereco = novo;
+            this.enderecoDoCliente = novo;
         }  
     }
+
 
 	public Calendar getDataDeCadastro() {
     	return this.dataDeCadastro;
     }
     public void setDataDeCadastro(Calendar novo) {
     	this.dataDeCadastro = novo;
+    }
+    
+    public int getCodigoCliente(){
+        return this.codigoCliente;
+    } 
+    public void setCodigoCliente(int novo){
+    	if (novo == 0) {
+    		System.out.println("O cÛdigo do cliente n„o foi informado, por favor informe-o.");
+    	} else {
+    		this.codigoCliente = novo;
+    	}
+        
     }
 
 }

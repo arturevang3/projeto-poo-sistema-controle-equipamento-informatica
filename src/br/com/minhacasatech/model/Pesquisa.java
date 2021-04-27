@@ -1,11 +1,18 @@
 package br.com.minhacasatech.model;
 
-import br.com.minhacasatech.DAO.*;
 
 public interface Pesquisa {
+
+	void pesquisar(Equipamento equipamento);
+
+	void pesquisar(Local local);
+
+	void pesquisar(Cliente cliente);
+
+	void pesquisar(Responsavel responsavel);
+
+	void pesquisar(Fornecedor fornecedor);
+
 	
-	public static void pesquisar() {
-		
-	}
 
 }

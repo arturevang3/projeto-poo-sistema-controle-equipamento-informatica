@@ -1,33 +1,47 @@
 package br.com.minhacasatech.model;
 
 public class Local {
-	private String nomeDaCasa;
-	private String nomeDoCompartimento;
+	private String casa;
+	private String compartimento;
+	private int codigoLocal;
 	
-	public Local(String nomeDaCasa, String nomeDoCompartimento) {
-		setNomeDaCasa(nomeDaCasa);
-		setNomeDoCompartimento(nomeDoCompartimento);
+	public Local(String casa, String compartimento, int codigoLocal) {
+		setCasa(casa);
+		setCompartimento(compartimento);
+		setCodigoLocal(codigoLocal);
 	}
 	
-	public String getNomeDacasa() {
-		return this.nomeDaCasa;
+	public String getCasa() {
+		return this.casa;
 	}
-	public void setNomeDaCasa(String novo) {
+	public void setCasa(String novo) {
 		if (novo == "" || novo == null) {
 			System.out.println("O nome da casa não foi informado, por favor informe-o");
 		} else {
-			this.nomeDaCasa = novo;
+			this.casa = novo;
 		}
 	}
 	
-	public String getNomeDoCompartimento() {
-		return this.nomeDoCompartimento;
+	public String getCompartimento() {
+		return this.compartimento;
 	}
-	public void setNomeDoCompartimento(String novo) {
+	public void setCompartimento(String novo) {
 		if (novo == "" || novo == null) {
 			System.out.println("O nome do compartimento não foi informado, por favor informe-o.");
 		} else {
-			this.nomeDoCompartimento = novo;
+			this.compartimento = novo;
 		}
 	}
+	
+	public int getCodigoLocal(){
+        return this.codigoLocal;
+    } 
+    public void setCodigoLocal(int novo){
+    	if (novo == 0) {
+    		System.out.println("O código do responsável não foi informado, por favor informe-o.");
+    	} else {
+    		this.codigoLocal = novo;
+    	}
+        
+    }
 }

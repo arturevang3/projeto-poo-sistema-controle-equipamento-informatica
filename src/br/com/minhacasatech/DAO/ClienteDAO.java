@@ -5,21 +5,38 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class ClienteDAO {
-	private ArrayList <Cliente> clientes;
+	private ArrayList <Cliente> clientes = new ArrayList<Cliente>();
 	File arq;
 	FileWriter writer;
 	PrintWriter escrever;
-	String texto;
+	String texto = "";
 	FileReader reader;
 	BufferedReader ler;
 	
+	//carregar e salvar as informações de arquivo de texto no ArrayList
+	public ArrayList <Cliente> getClientes(ArrayList <Cliente> clientes){
+		return clientes;
+	}
+	
+	public void setClientes(ArrayList <Cliente> clientes){
+		this.clientes = clientes;
+	} 
+	
 	public void salvar(Cliente cliente) {
-		clientes.add(cliente);
+		this.clientes.add(cliente);
 		try {
 			arq = new File("clientes.txt");
 			writer = new FileWriter(arq);
 			escrever = new PrintWriter(writer);
-			escrever.print(clientes);
+			String linha = "";
+			for(int i = 0; i < clientes.size();i++) {
+				linha = linha + "nome:" + clientes.get(i).getNome()+";";
+				linha = linha + "endereco:" + clientes.get(i).getEndereco()+";";
+				linha = linha + "cpf:" + clientes.get(i).getCpf()+";";
+				linha = linha + "codigo:" + clientes.get(i).getCodigoCliente()+";";
+				linha = linha + "data:" + clientes.get(i).getDataDeCadastro().getTime()+"/";
+			}
+			escrever.print(linha);
 			escrever.close();
 			writer.close();
 			

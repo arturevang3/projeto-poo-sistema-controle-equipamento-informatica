@@ -3,54 +3,55 @@ package br.com.minhacasatech.model;
 import java.util.Calendar;
 
 public class Venda {
-	private Cliente cliente;
-	private Responsavel responsavel;
-	private Equipamento equipamento;
+	private int codigoCliente;
+	private int codigoResponsavel;
+	private int codigoEquipamento;
 	private int quantidade;
-	private float valor;
+	private float valorUnitario;
+	private float valorTotal;
 	private Calendar dataDaVenda;
-	private String tipoDePagamento;
+	private String formaDePagamento;
 	
-	public Venda(Cliente cliente, Responsavel responsavel, Equipamento equipamento, int quantidade, float valor, Calendar dataDaVenda, String tipoDePagamento) {
-		setCliente(cliente);
-		setResponsavel(responsavel);
-		setEquipamento(equipamento);
+	public Venda(int codigoCliente, int codigoResponsavel, int codigoEquipamento, int quantidade, float valorUnitario, Calendar dataDaVenda, String formaDePagamento) {
+		setCodigoCliente(codigoCliente);
+		setCodigoResponsavel(codigoResponsavel);
+		setCodigoEquipamento(codigoEquipamento);
 		setQuantidade(quantidade);
-		setValor(valor);
+		setValorUnitario(valorUnitario);
 		setDataDaVenda(dataDaVenda);
-		setTipoDePagamento(tipoDePagamento);
+		setFormaDePagamento(formaDePagamento);
 	}
 	
-	public Cliente getCliente() {
-		return this.cliente;
+	public int getCodigoCliente() {
+		return this.codigoCliente;
 	}
-	public void setCliente(Cliente novo) {
-		if (novo == null) {
-			System.out.println("Cliente não foi informado, por favor informe-o.");
+	public void setCodigoCliente(int novo) {
+		if (novo == 0) {
+			System.out.println("O codigo do cliente não foi informado, por favor informe-o.");
 		} else {
-			this.cliente = novo;
+			this.codigoCliente = novo;
 		}
 	}
 	
-	public Responsavel getResponsavel() {
-		return this.responsavel;
+	public int getCodigoResponsavel() {
+		return this.codigoResponsavel;
 	}
-	public void setResponsavel(Responsavel novo) {
-		if (novo == null) {
-			System.out.println("Responsável não foi informado, por favor informe-o");
+	public void setCodigoResponsavel(int novo) {
+		if (novo == 0) {
+			System.out.println("O código de responsável não foi informado, por favor informe-o");
 		} else {
-			this.responsavel = novo;
+			this.codigoResponsavel = novo;
 		}
 	}
 	
-	public Equipamento getEquipamento() {
-		return this.equipamento;
+	public int getCodigoEquipamento() {
+		return this.codigoEquipamento;
 	}
-	public void setEquipamento(Equipamento novo) {
-		if (novo == null) {
-			System.out.println("Equipamento não foi informado, por favor informe-o");
+	public void setCodigoEquipamento(int novo) {
+		if (novo == 0) {
+			System.out.println("O codigo de equipamento não foi informado, por favor informe-o");
 		} else {
-			this.equipamento = novo;
+			this.codigoEquipamento = novo;
 		}
 	}
 	
@@ -58,7 +59,7 @@ public class Venda {
         return this.quantidade;
     }
     public void setQuantidade(int novo){
-    	if (quantidade == 0) {
+    	if (novo == 0) {
     		System.out.println("A quantidade não foi informada, por favor informe-a.");
     	} else {
     		this.quantidade = novo;
@@ -66,15 +67,23 @@ public class Venda {
         
     }
     
-    public float getValor() {
-    	return this.valor;
+    public float getValorUnitario() {
+    	return this.valorUnitario;
     }
-    public void setValor(float novo) {
-    	if (valor == 0) {
-    		System.out.println("O valor não foi informado, por favor informe-o.");
+    public void setValorUnitario(float novo) {
+    	if (novo == 0) {
+    		System.out.println("O valorUnitario não foi informado, por favor informe-o.");
     	} else {
-    		this.valor = novo;
+    		this.valorUnitario = novo;
     	}
+    }
+    
+    public float getValorTotal() {
+    	return this.valorTotal;
+    }
+    public void setValorTotal() {
+    		this.valorTotal = this.quantidade*this.valorUnitario;
+    	
     }
     
     public Calendar getDataDaVenda() {
@@ -84,15 +93,15 @@ public class Venda {
     	this.dataDaVenda = novo;
     }
     
-    public String getTipoDePagamento() {
-    	return this.tipoDePagamento;
+    public String getFormaDePagamento() {
+    	return this.formaDePagamento;
     }
     
-    public void setTipoDePagamento(String novo) {
+    public void setFormaDePagamento(String novo) {
     	if (novo == "" || novo == null) {
     		System.out.println("O tipo de pagamento não foi informado, por favor informe-o.");
     	} else {
-    		this.tipoDePagamento = novo;
+    		this.formaDePagamento = novo;
     	}
     }
 }
